@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="icon" href="dino-logo.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #8FBC8F; /* Dinosaur green */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1; /* Allows the text to fill the remaining space */
+        }
+        .main-header {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #FFD700; /* Gold color for better contrast */
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #555;
+            color: #fff; /* Change text color on hover */
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="dino-logo.png" alt="Dino Logo" class="logo">
+    <div class="header-text">
+        <div class="main-header">Dino-Net Productions</div>
+        <h1>My Projects</h1>
+    </div>
+</header>
+
+<nav>
+    <a href="#Unity">Unity Beta</a>
+    <a href="#Dinobull">Dinobull</a>
+    <a href="#DinoBlox">DinoBlox</a>
+    <a href="#DinoTerminal">DinoTerminal</a>
+    <a href="#Scragland">Scragland</a>
+    <a href="#Pengo">Pengo</a>
+    <a href="#PixelScrag">PixelScrag</a>
+</nav>
+
+<div class="content">
+    <h2 id="Unity">Unity Beta</h2>
+    <p>Discord bot for seamless 24/7 cross-server chatting. Think of it as a userphone that runs 24/7, except certain AI chatbots can interact as well! We will also be looking to add chatting between multiple platforms later on.
+    We intend to be better than other CGC bots like ConnectX and NetCord by using the modularity of Python whereas NetCord and ConnectX use discord.js. Plus, with our use of Python, we can easily find and fix issues.
+    </p>
+
+    <h2 id="Dinobull">Dinobull</h2>
+    <p>A fork of Pitbull, It is a hotline client+server+tracker that removes all limitations such as being able to transfer over 4GB in size. Makes Discord look like dirt.
+    </p>
+
+    <h2 id="DinoBlox">DinoBlox</h2>
+    <p>A sandbox game forked from Infiniminer:
+        - Features:
+        - Full Inventory System
+        - Full Item System
+        - Items from Vanilla MC as well as EE2 (Equivalent Exchange 2)</p>
+
+    <h2 id="DinoTerminal">DinoTerminal</h2>
+    <p>A fully feature Terminal that aims to be better than Windows Terminal and Command Prompt</p>
+
+    <h2 id="Scragland">Scragland</h2>
+    <p>A 2D MC style Dungeon Game
+        Features:
+        - Full Inventory System
+        - Armour System (To be ported to DinoBlox later)</p>
+
+    <h2 id="Pengo">Pengo</h2>
+    <p>A Pacman style game complete with in-game editor</p>
+
+    <h2 id="PixelScrag">PixelScrag</h2>
+    <p>A Paint program that has features from Deluxe Paint</p>
+</div>
+
+</body>
+</html>
