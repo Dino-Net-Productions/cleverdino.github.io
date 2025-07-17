@@ -3,66 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
+    <title>Clever Dino YT</title>
     <link rel="icon" href="dino-logo.png" type="image/png">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #8FBC8F; /* Dinosaur green */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #8FBC8F 0%, #7BA05B 100%);
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
         header {
-            background-color: #333;
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
             color: white;
-            padding: 10px 20px;
+            padding: 20px 30px;
             display: flex;
             align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         .logo {
-            width: 80px;
-            height: 80px;
-            margin-right: 20px;
+            width: 90px;
+            height: 90px;
+            margin-right: 25px;
+            border-radius: 50%;
+            border: 3px solid #FFD700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
         }
         .header-text {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            flex-grow: 1; /* Allows the text to fill the remaining space */
+            flex-grow: 1;
         }
         .main-header {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 32px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .header-text h1 {
+            margin: 5px 0 0 0;
+            font-size: 18px;
+            color: #e0e0e0;
+            font-weight: 400;
         }
         nav {
-            margin: 20px 0;
+            margin: 30px 0;
             text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 15px;
+            max-width: 600px;
+            margin: 30px auto;
         }
         nav a {
-            margin: 0 15px;
-            color: #FFD700; /* Gold color for better contrast */
+            margin: 0 20px;
+            color: #FFD700;
             text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
+            padding: 12px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 16px;
+            display: inline-block;
         }
         nav a:hover {
-            background-color: #555;
-            color: #fff; /* Change text color on hover */
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
         }
         .content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
         }
         h1 {
             color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
         }
         h2 {
             color: #333;
+            font-size: 24px;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #8FBC8F;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+        }
+        .channel-features {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #8FBC8F;
+        }
+        .channel-features ul {
+            margin: 15px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        .channel-features li {
+            margin-bottom: 12px;
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        .channel-features li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #8FBC8F;
+            font-weight: bold;
+        }
+        .intro {
+            background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 6px solid #8FBC8F;
+            box-shadow: 0 4px 15px rgba(143, 188, 143, 0.2);
+        }
+        .intro p {
+            margin: 0;
+            font-size: 18px;
+            color: #2c5530;
+        }
+        .posting-schedule {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            color: #f0f0f0;
+            font-weight: 600;
+            padding: 25px 30px;
+            margin-top: 40px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 18px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            border: 2px solid #FFD700;
+        }
+        .posting-schedule::before {
+            content: '📅 ';
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+            margin: 15px 0;
+        }
+        em {
+            color: #8FBC8F;
+            font-weight: 600;
+            font-style: normal;
+        }
+        strong {
+            color: #333;
+        }
+        .channel-features strong {
+            color: #2c5530;
+            font-size: 18px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                margin: 10px;
+                padding: 20px;
+            }
+            .main-header {
+                font-size: 24px;
+            }
+            nav a {
+                margin: 5px;
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+            h2 {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -71,59 +204,77 @@
 <header>
     <img src="dino-logo.png" alt="Dino Logo" class="logo">
     <div class="header-text">
-        <div class="main-header">Dino-Net Productions</div>
-        <h1>My Projects</h1>
+        <div class="main-header">Clever Dino YT</div>
+        <h1>My YouTube Channels</h1>
     </div>
 </header>
 
 <nav>
-    <a href="dinobull.html">Dinobull</a>
-    <a href="dinoblox.html">DinoBlox</a>
-    <a href="dinoterminal.html">DinoTerminal</a>
-    <a href="scragland.html">Scragland</a>
-    <a href="pengo.html">Pengo</a>
-    <a href="pixelscrag.html">PixelScrag</a>
-    <a href="dinigma.html">Dinigma</a>
-    <a href="dinorealms.html">DinoRealms</a>
+    <a href="#adventures">Clever Dino Adventures</a>
+    <a href="#timecapsule">Time Capsule</a>
+    <a href="#tech">Does Tech</a>
 </nav>
 
 <div class="content">
+    <div class="intro">
+        <p><strong>Welcome to Clever Dino YT!</strong> I'm Paul aka Clever Dino, your companion for adventures, media preservation, and tech exploration. I'm autistic and use a wheelchair for longer walking distances - because disabilities don't stop me from doing the things I love, and they shouldn't stop you either.</p>
+    </div>
 
-    <h2 id="Dinobull">Dinobull</h2>
-    <p>A fork of Pitbull, It is a hotline client+server+tracker that removes all limitations such as being able to transfer over 4GB in size. Makes Discord look like dirt.\n
-    Join my Pitbull Server at hotline.dino-net.co.uk
-    </p>
+    <h2 id="adventures">🌞 Clever Dino Adventures</h2>
+    <p>Your adventure companion for travel and celebrations! Here you'll find my August travel adventures and special occasion celebrations.</p>
+    
+    <div class="channel-features">
+        <strong>Discover:</strong>
+        <ul>
+            <li>🌞 <strong>August Adventures</strong> - Summer travel season destinations and festivals, showing that even with Autism and Disability you can still do the things that matter most, disability is no barrier</li>
+            <li>🎄 <strong>Holiday Celebrations</strong> - Christmas traditions and seasonal magic</li>
+            <li>🎂 <strong>Birthday & Milestone Moments</strong> - Personal celebrations worth sharing</li>
+            <li>🎬 <strong>Curated Highlights</strong> - Best experiences for the main channel</li>
+        </ul>
+    </div>
+    
+    <p>This is one of my three channels documenting different life and travel aspects. Subscribe for premium trips and celebrations.</p>
+    
+    <p><em>Join me for memorable barrier-free adventures! Subscribe and hit the bell! 🦕✨</em></p>
 
-    <h2 id="DinoBlox">DinoBlox</h2>
-    <p>A sandbox game forked from Infiniminer:
-        - Features:
-        - Full Inventory System
-        - Full Item System
-        - Items from Vanilla MC as well as EE2 (Equivalent Exchange 2)</p>
+    <h2 id="timecapsule">📺 Clever Dino Time Capsule</h2>
+    <p>Your media preservation companion! Here you'll find my curated TV/movie archives, rare DVD extras, and behind-the-scenes treasures.</p>
+    
+    <div class="channel-features">
+        <strong>Discover:</strong>
+        <ul>
+            <li>📺 <strong>TV/Movie Archives</strong> - Preserving classic shows, films, and entertainment memories</li>
+            <li>💿 <strong>Rare DVD Extras</strong> - Curating hard-to-find bonus content and special features</li>
+            <li>🎬 <strong>Behind-the-Scenes Treasures</strong> - Exclusive content and production insights</li>
+            <li>🗃️ <strong>Curated Media Highlights</strong> - Best preserved entertainment for lasting appreciation</li>
+        </ul>
+    </div>
+    
+    <p>This is one of my three channels documenting different media and preservation aspects. Subscribe for premium archived content and rare entertainment discoveries.</p>
+    
+    <p><em>Join me for barrier-free media adventures! Subscribe and hit the bell! 🦕✨</em></p>
 
-    <h2 id="DinoTerminal">DinoTerminal</h2>
-    <p>A fully feature Terminal that aims to be better than Windows Terminal and Command Prompt</p>
+    <h2 id="tech">💻 Clever Dino Does Tech</h2>
+    <p>Your tech companion! Here you'll find my tech explorations, reviews, and digital adventures.</p>
+    
+    <div class="channel-features">
+        <strong>Discover:</strong>
+        <ul>
+            <li>💻 <strong>Tech Reviews</strong> - Hardware, software, and accessibility-focused technology</li>
+            <li>🔧 <strong>Tech Tutorials</strong> - Step-by-step guides and problem-solving solutions</li>
+            <li>📱 <strong>Digital Adventures</strong> - Exploring new apps, platforms, and online experiences</li>
+            <li>🎬 <strong>Curated Tech Highlights</strong> - Best tech discoveries for deeper exploration</li>
+        </ul>
+    </div>
+    
+    <p>This is one of my three channels documenting different life and tech aspects. Subscribe for premium tech content and accessibility insights.</p>
+    
+    <p><em>Join me for barrier-free tech adventures! Subscribe and hit the bell! 🦕✨</em></p>
 
-    <h2 id="Scragland">Scragland</h2>
-    <p>A 2D MC style Dungeon Game
-        Features:
-        - Full Inventory System
-        - Armour System (To be ported to DinoBlox later)</p>
+    <div class="posting-schedule">
+        Posting Schedule: New content during August and major holidays (Adventures), regular preservation content (Time Capsule), and regular tech content focusing on accessibility (Does Tech).
+    </div>
 
-    <h2 id="Pengo">Pengo</h2>
-    <p>A Pacman style game complete with in-game editor</p>
-
-    <h2 id="PixelScrag">PixelScrag</h2>
-    <p>A Paint program that has features from Deluxe Paint</p>
-
-    <h2 id="Dinigma">Dinigma</h2>
-    <p>An Enigma Machine that allows for secure communication</p>
-
-    <h2 id="DinoRealms">DinoRealms</h2>
-    <p>A MUD (Multi User Dungeon) based around Dinosaurs</p>
-
-    <h2 id="DogsOfWar">DogsOfWar</h2>
-    <p>A game centred around WWII</p>
 </div>
 
 </body>
